@@ -17,7 +17,7 @@ app.use(express.json())
 app.use('/products/images', express.static(path.join(__dirname, 'public', 'products', 'images')));
 
 app.use(cors({
-    origin: 'http://localhost:5173',
+    origin: 'https://nicoecommerce.netlify.app',
     credentials: true
 }))
 
