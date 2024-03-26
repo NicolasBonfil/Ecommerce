@@ -1,0 +1,93 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    user-select: none;
+}
+
+header{
+    height: 18vh;
+    border-bottom: 1px solid black;
+    display: flex;
+    flex-direction: column;
+}
+
+#header-add{
+    height: 25%;
+    width: 100%;
+    background-color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#add{
+    color: white;
+    font-size: 15px;
+    margin: 0;
+}
+
+#header-body{
+    height: 75%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    padding: 15px;
+}
+
+#logo-container{
+    width: 30%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+#logo{
+    width: auto;
+    max-height: 100%;
+}
+
+#navbar-container{
+    width: 40%;
+}
+
+#navbar-item-list{
+    display: flex;
+    justify-content: center;
+    column-gap: 20px;
+    padding: 0;
+    margin: 0;
+}
+
+.navbar-item{
+    list-style-type: none;
+    color: black;
+}
+
+.navbar-item-link{
+    color: black;
+    font-size: 17px;
+    text-decoration: none;
+}
+
+#buttons-container{
+    width: 30%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    display: flex;
+    justify-content: center;
+}
+
+#cart-button-container, #session-button-container{
+    display: flex;
+    justify-content: center;
+    margin: 20px;
+}
+
+#cart-button-link, #session-button-link{
+    font-size: 25px;
+    color: black;
+    text-decoration: none;
+}
+
+
