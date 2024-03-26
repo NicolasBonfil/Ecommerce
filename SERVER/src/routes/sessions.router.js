@@ -70,7 +70,7 @@ router.post("/register", async (req, res) => {
     }
     
     try {
-        await fetch("http://localhost:8080/api/carts", {
+        await fetch("https://ecommerce-1-s9zq.onrender.com/api/carts", {
             method:"POST",
             headers: {
                 "Content-Type": "application/json",

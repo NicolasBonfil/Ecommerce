@@ -18,7 +18,7 @@ export const CartContainer = () => {
     const navigate = useNavigate()
 
     useEffect(() => {
-        Axios.get("http://localhost:8080/api/carts")
+        Axios.get("https://ecommerce-1-s9zq.onrender.com/api/carts")
         .then(res => {
             setCart(res.data)
         })
@@ -32,7 +32,7 @@ export const CartContainer = () => {
 
 
     const deleteCartItem = (pid) => {
-        Axios.delete(`http://localhost:8080/api/carts/products/${pid}`)
+        Axios.delete(`https://ecommerce-1-s9zq.onrender.com/api/carts/products/${pid}`)
         .then(() =>{
             const updatedCart = cart.filter(p => p.product._id !== pid)
             setCart(updatedCart)
@@ -40,7 +40,7 @@ export const CartContainer = () => {
     }
 
     const deleteCartItems = () => {
-        Axios.delete("http://localhost:8080/api/carts/products")
+        Axios.delete("https://ecommerce-1-s9zq.onrender.com/api/carts/products")
         .then(() => {
             navigate("/products")
         })
@@ -62,7 +62,7 @@ export const CartContainer = () => {
     }, [cart])
 
     const updateQuantity = (operation, pid) => {
-        Axios.put(`http://localhost:8080/api/carts/products/${pid}`, {operation})
+        Axios.put(`https://ecommerce-1-s9zq.onrender.com/api/carts/products/${pid}`, {operation})
         .then(res => {
             const updatedItems = cart.map(product => {
                 if (product.product._id === pid) {

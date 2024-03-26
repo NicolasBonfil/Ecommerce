@@ -19,7 +19,7 @@ export const ResetPasswordMailContainer = () => {
 
     const sendMail = () => {
         setIsLoading(true)
-        Axios.post("http://localhost:8080/api/sessions/request-password-reset", {email})
+        Axios.post("https://ecommerce-1-s9zq.onrender.com/api/sessions/request-password-reset", {email})
         .then(res => {
             navigate(`/reset-password/checkpoint/${email}`)
         })

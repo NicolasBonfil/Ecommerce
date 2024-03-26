@@ -25,7 +25,7 @@ export const ResetPasswordContainer = () => {
     const navigate = useNavigate()
 
     const resetPassword = () => {
-        Axios.put("http://localhost:8080/api/sessions/reset-password", formData)
+        Axios.put("https://ecommerce-1-s9zq.onrender.com/api/sessions/reset-password", formData)
         .then(() => {
             navigate("/")
         })

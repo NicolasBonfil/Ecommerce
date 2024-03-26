@@ -13,7 +13,7 @@ export const ResetPasswordCheckpointContainer = () => {
 
     const sendEmail = () => {
         console.log(email);
-        Axios.post("http://localhost:8080/api/sessions/request-password-reset", {email})
+        Axios.post("https://ecommerce-1-s9zq.onrender.com/api/sessions/request-password-reset", {email})
         .then(res => {
         })
         .catch(error => {
@@ -29,7 +29,7 @@ export const ResetPasswordCheckpointContainer = () => {
     const navigate = useNavigate()
 
     const confirmCode = () => {
-        Axios.post("http://localhost:8080/api/sessions/request-password-reset/checkpoint", {code})
+        Axios.post("https://ecommerce-1-s9zq.onrender.com/api/sessions/request-password-reset/checkpoint", {code})
         .then(() => {
             navigate("/reset-password")
         })

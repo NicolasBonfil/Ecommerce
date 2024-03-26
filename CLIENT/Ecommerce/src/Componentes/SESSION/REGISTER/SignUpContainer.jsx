@@ -33,7 +33,7 @@ export const SignUpContainer = () => {
     const [errors, setErrors] = useState({})
 
     const signup = () => {
-        Axios.post("http://localhost:8080/api/sessions/register", formData)
+        Axios.post("https://ecommerce-1-s9zq.onrender.com/api/sessions/register", formData)
 		.then(result => {
 			navigate("/login")
 		})

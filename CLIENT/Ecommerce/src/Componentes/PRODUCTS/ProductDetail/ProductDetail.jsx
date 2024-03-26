@@ -5,7 +5,7 @@ export const ProductDetail = ({addToCart, updateQuantity, product, quantity}) =>
         <>
             <div id='product-detail-card' className='row'>
                 <div className='col-sm-12 col-md-9 col-lg-7' id='product-detail-image'>
-                    <img src={`http://localhost:8080/products/images/${product.images[0]}`} alt="" className='img-fluid h-100'/>  
+                    <img src={`https://ecommerce-1-s9zq.onrender.com/products/images/${product.images[0]}`} alt="" className='img-fluid h-100'/>  
                 </div>
 
                 <div className='col-sm-12 col-md-3 col-lg-5' id='product-detail-body'>

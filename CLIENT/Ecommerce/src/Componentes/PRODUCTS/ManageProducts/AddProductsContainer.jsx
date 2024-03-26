@@ -33,7 +33,7 @@ export const AddProductsContainer = () => {
 
         if(Object.keys(formErrors).length > 0) return setErrors(formErrors);
 
-        Axios.post("http://localhost:8080/api/products/upload-image", form)
+        Axios.post("https://ecommerce-1-s9zq.onrender.com/api/products/upload-image", form)
         .then(() => {
             setErrors({})
             const images = formData.images
@@ -47,7 +47,7 @@ export const AddProductsContainer = () => {
     }
 
     const deleteImage = (imageName) => {
-        Axios.delete(`http://localhost:8080/api/products/delete-image/${imageName}`)
+        Axios.delete(`https://ecommerce-1-s9zq.onrender.com/api/products/delete-image/${imageName}`)
         .then(() => {
             setErrors({})
             const images = formData.images
@@ -80,7 +80,7 @@ export const AddProductsContainer = () => {
     const addProduct = (e) => {
         e.preventDefault()
     
-        Axios.post("http://localhost:8080/api/products", formData)
+        Axios.post("https://ecommerce-1-s9zq.onrender.com/api/products", formData)
         .then(()  => {
             navigate("/products-section")
         })

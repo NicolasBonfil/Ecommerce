@@ -33,7 +33,7 @@ export const EditProductsContainer = () => {
 
         if(Object.keys(formErrors).length > 0) return setErrors(formErrors);
 
-        Axios.post("http://localhost:8080/api/products/upload-image", form)
+        Axios.post("https://ecommerce-1-s9zq.onrender.com/api/products/upload-image", form)
         .then(() => {
             setErrors({})
             const images = formData.images
@@ -47,7 +47,7 @@ export const EditProductsContainer = () => {
     }
 
     const deleteImage = (imageName) => {
-        Axios.delete(`http://localhost:8080/api/products/delete-image/${imageName}`)
+        Axios.delete(`https://ecommerce-1-s9zq.onrender.com/api/products/delete-image/${imageName}`)
         .then(() => {
             setErrors({})
             const images = formData.images
@@ -66,7 +66,7 @@ export const EditProductsContainer = () => {
     const {pid} = useParams()
 
     useEffect(() => {
-        Axios.get(`http://localhost:8080/api/products/${pid}`)
+        Axios.get(`https://ecommerce-1-s9zq.onrender.com/api/products/${pid}`)
         .then(result => {
             setFormData({
                 title: result.data.title,
@@ -99,7 +99,7 @@ export const EditProductsContainer = () => {
     const editProduct = (e) => {
         e.preventDefault()
 
-        Axios.put(`http://localhost:8080/api/products/${pid}`, formData)
+        Axios.put(`https://ecommerce-1-s9zq.onrender.com/api/products/${pid}`, formData)
         .then(() => {
             navigate("/products-section")
         })

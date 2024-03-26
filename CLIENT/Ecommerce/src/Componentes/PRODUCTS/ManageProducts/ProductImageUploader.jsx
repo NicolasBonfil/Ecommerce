@@ -39,7 +39,7 @@ export const ProductImageUploader = ({errors, images, addImage, deleteImage}) =>
                 <div id='uploaded-images'>
                     {
                         images.map(imageName => {
-                            let url = `http://localhost:8080/products/images/${imageName}`;
+                            let url = `https://ecommerce-1-s9zq.onrender.com/products/images/${imageName}`;
                             return(
                                 <div className='uploaded-image' key={imageName}>
                                     <button className='delete-image' onClick={() => deleteImage(imageName)}>

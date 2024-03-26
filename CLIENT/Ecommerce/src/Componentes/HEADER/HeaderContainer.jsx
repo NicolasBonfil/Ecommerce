@@ -9,7 +9,7 @@ export const HeaderContainer = () => {
     const [isLog, setIsLog] = useState(false)
 
     useEffect(() => {
-        Axios.get("http://localhost:8080/api/users/isLog")
+        Axios.get("https://ecommerce-1-s9zq.onrender.com/api/users/isLog")
         .then((res) => {
             setIsLog(res.data)
         })

@@ -6,7 +6,7 @@ export const ProfileContainer = () => {
     const navigate = useNavigate()
     
     const logout = () => {
-        Axios.post("http://localhost:8080/api/sessions/logout")
+        Axios.post("https://ecommerce-1-s9zq.onrender.com/api/sessions/logout")
         .then(res => {
             navigate("/")
         })

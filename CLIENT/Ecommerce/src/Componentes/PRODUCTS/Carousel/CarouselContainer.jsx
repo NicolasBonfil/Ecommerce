@@ -21,7 +21,7 @@ export const CarouselContainer = ({pid}) => {
     const [products, setProducts] = useState([])
 
     useEffect(() => {
-        Axios.get("http://localhost:8080/api/products")
+        Axios.get("https://ecommerce-1-s9zq.onrender.com/api/products")
         .then(res => {
             let data = res.data;
             console.log(pid);

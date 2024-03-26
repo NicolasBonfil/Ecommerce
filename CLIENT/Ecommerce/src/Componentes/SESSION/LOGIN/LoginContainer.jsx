@@ -26,7 +26,7 @@ export const LoginContainer = () => {
     }
 
     const login = () => {
-      Axios.post("http://localhost:8080/api/sessions/login", formData)
+      Axios.post("https://ecommerce-1-s9zq.onrender.com/api/sessions/login", formData)
 		.then((res) => {
 			navigate("/")
 		})

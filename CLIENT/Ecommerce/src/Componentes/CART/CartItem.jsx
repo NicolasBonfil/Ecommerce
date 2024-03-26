@@ -6,7 +6,7 @@ export const CartItem = ({p, updateQuantity, deleteCartItem, stock}) => {
     return (
         <>
             <div className='cart-product-image'>
-                <img src={`http://localhost:8080/products/images/${p.product.images[0]}`} alt="" />
+                <img src={`https://ecommerce-1-s9zq.onrender.com/products/images/${p.product.images[0]}`} alt="" />
             </div>
             <div className='cart-product-info'>
                 <p>{p.product.title}</p>

@@ -11,7 +11,7 @@ import { useFilterContext } from '../../../Context/FilterContext.jsx';
 export const ProductsSection = () => {
     const [isAdmin, setIsAdmin] = useState(false)
     useEffect(() => {
-        Axios.get("http://localhost:8080/api/users")
+        Axios.get("https://ecommerce-1-s9zq.onrender.com/api/users")
         .then(result => {
             if(result.data.role === "ADMIN") setIsAdmin(true)
         })
@@ -25,7 +25,7 @@ export const ProductsSection = () => {
 
     useEffect(() => {
         setIsLoading(true);
-        Axios.get("http://localhost:8080/api/products")
+        Axios.get("https://ecommerce-1-s9zq.onrender.com/api/products")
         .then(res => {
             setProducts(filteredProducts(res.data));
 
@@ -43,7 +43,7 @@ export const ProductsSection = () => {
 
 
     const deleteProduct = (pid) => {
-        Axios.delete(`http://localhost:8080/api/products/${pid}`)
+        Axios.delete(`https://ecommerce-1-s9zq.onrender.com/api/products/${pid}`)
         .then(() => {
             let newList = products.filter((product) => product._id !== pid)
             setProducts(newList)

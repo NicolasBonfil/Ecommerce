@@ -20,7 +20,7 @@ export const CheckoutContainer = () => {
     const [errors, setErrors] = useState({})
 
     useEffect(() => {
-        Axios.get("http://localhost:8080/api/users")
+        Axios.get("https://ecommerce-1-s9zq.onrender.com/api/users")
         .then((res) => {
             setUser(res.data)
         })
@@ -28,7 +28,7 @@ export const CheckoutContainer = () => {
             navigate("/login")
         })
 
-        Axios.get("http://localhost:8080/api/carts")
+        Axios.get("https://ecommerce-1-s9zq.onrender.com/api/carts")
         .then((res) => {
             const productsQuantity = res.data.reduce((accumulator, product) => {
                 return accumulator + product.quantity;
@@ -50,7 +50,7 @@ export const CheckoutContainer = () => {
     const navigate = useNavigate()
 
     const logout = () => {
-        Axios.post("http://localhost:8080/api/sessions/logout")
+        Axios.post("https://ecommerce-1-s9zq.onrender.com/api/sessions/logout")
         .then(res => {
             navigate("/")
         })
@@ -64,12 +64,12 @@ export const CheckoutContainer = () => {
 
             let code;
 
-            await Axios.post("http://localhost:8080/api/users/add-address", address)
+            await Axios.post("https://ecommerce-1-s9zq.onrender.com/api/users/add-address", address)
             .then(res => {
                 res.data.payload? code = res.data.payload : code = address.addressCode
             })
-            await Axios.post("http://localhost:8080/api/tickets", {cart, userId, receiver, code})
-            await Axios.delete("http://localhost:8080/api/carts/products")
+            await Axios.post("https://ecommerce-1-s9zq.onrender.com/api/tickets", {cart, userId, receiver, code})
+            await Axios.delete("https://ecommerce-1-s9zq.onrender.com/api/carts/products")
     
             Swal.fire({
                 title: "Se ha realizado la compra con éxito",

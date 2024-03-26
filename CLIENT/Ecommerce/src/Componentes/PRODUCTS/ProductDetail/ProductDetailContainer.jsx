@@ -15,7 +15,7 @@ export const ProductDetailContainer = () => {
 
     useEffect(() => {
 
-        Axios.get(`http://localhost:8080/api/products/${pid}`)
+        Axios.get(`https://ecommerce-1-s9zq.onrender.com/api/products/${pid}`)
         .then(res => {
             setProduct(res.data)
         })
@@ -34,7 +34,7 @@ export const ProductDetailContainer = () => {
 
 	const addToCart = (id, quantity) => {
 
-        Axios.put("http://localhost:8080/api/carts/products", {id, quantity})
+        Axios.put("https://ecommerce-1-s9zq.onrender.com/api/carts/products", {id, quantity})
 		.then(() => {
 			navigate("/products")
 		})
